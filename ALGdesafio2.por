@@ -175,9 +175,7 @@ inclua biblioteca Tipos --> tp
       pare
     }
   }
-
   // funcoes push e search
-  // funcao push
   funcao vazio push(inteiro data[], cadeia descricao) {
     inteiro dataConvertida[2]
     dataConvertida = dataArray2Timestamp(data)
@@ -188,8 +186,6 @@ inclua biblioteca Tipos --> tp
     totalEventos++
     bubbleSort()
   }
-
-
     // Converte array de data para timestamp [dia|mes|ano|hora|minuto] -> timestamp
   funcao inteiro dataArray2Timestamp(inteiro data[]){
     inteiro totalDias = (data[2] - 1970) * 365 + (data[1] - 1) * 30 + data[0]
@@ -200,8 +196,6 @@ inclua biblioteca Tipos --> tp
   }
 
   //  Organiza a lista de evento no push
-  // https://pt.wikipedia.org/wiki/Bubble_sort
-  //  O algoritmo pode ser mais performatico se trocar uma linha pela variavel totalEventos (dica: começa com n)
   funcao vazio bubbleSort(){
 		inteiro i, j, tempDia, tempHora, n
     cadeia tempDescricao
@@ -244,9 +238,7 @@ inclua biblioteca Tipos --> tp
       escreva("\n",horarioEvento[0],"-",horarioEvento[1], "-",horarioEvento[2], " as ",horarioEvento[3],":",horarioEvento[4],"\n")
   }
 
-
   // nao foi mexido
-  
    // unix -> data [dia|mes|ano|hora|minuto]
   funcao inteiro timestamp2DataArray(inteiro unixTimestamp){
         inteiro totalSegundos = unixTimestamp
@@ -261,8 +253,6 @@ inclua biblioteca Tipos --> tp
         inteiro retorno[5] = {dia, mes, ano, hora, minuto}
         retorne retorno
   }
-
-
 
   // funcao de busca por data
   funcao inteiro search4Data(inteiro data[]){
